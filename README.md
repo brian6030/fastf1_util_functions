@@ -23,7 +23,7 @@ Install FastF1 library
 Import the script
 
 ```python
-import fastf1_util
+import fastf1_race_util
 ```
 
 ## Development Status
