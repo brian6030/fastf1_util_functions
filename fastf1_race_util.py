@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-
 def plot_laptimes_boxplot(data, x, y, hue, order, palette, figsize=(15, 10), xlabel=None, title=None):
     """
     Plot a boxplot of lap times.
@@ -205,7 +204,7 @@ def prepare_driver_laps(session, drivers, stints):
     """
     driver_laps_list = []
     for driver in drivers:
-        driver_laps = session.laps.pick_driver(driver).pick_quicklaps().reset_index(drop=True)
+        driver_laps = session.laps.pick_drivers(driver).pick_quicklaps().reset_index(drop=True)
         driver_laps['Driver'] = driver  # Add a column for the driver code
 
         # Get stint information for the driver
